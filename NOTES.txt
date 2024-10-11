@@ -1,0 +1,606 @@
+DAY 1 
+
+-> SPA 
+-> TRADITIONAL VS SPA 
+-> ANGULAR JS VS ANGULAR 
+-> KEY FEATURES 
+-> INSTALLATION 
+-> TYPESCRIPT 
+-> ANGULAR ARCHITECTURE 
+-> ANGULAR COMPONENTS 
+
+
+......................................
+
+DAY 2 
+
+-> DATABINDING IN ANGULAR 
+-> DIRECTIVES IN ANGULAR 
+-> PIPES IN ANGULAR 
+-> SERVICES IN ANGULAR
+-> HTTP CLIENT SERVICE 
+
+
+..................................................
+
+DAY 3 
+
+-> ANGULAR ROUTING 
+-> NESTED ROUTING 
+-> ANGULAR FORMS 
+-> UNIT TESTING 
+
+
+......................................................
+
+-> SPA 
+SINGLE PAGE APPLICATION 
+
+it is an app that works inside a browser and does not require page relading during use.
+
+Gmail, google Maps , facebook , GitHub. 
+
+->TRADITIONAL 
+
+MULTI PAGE APPLICATION , page reloading 
+
+.....................................................
+
+
+ANGULAR JS VS ANGULAR 
+
+ANGULAR JS 
+
+ANGULARJS 1.X .....
+JS based open source framework 
+
+ANGULAR 
+
+-> uses declarative programmng for UI.
+-> imperative programing for logic
+-> based on TS.
+-> DI , Routing , Unit testing 
+
+
+.................................................
+
+INSTALLATION 
+
+-> VS CODE 
+-> NODE JS 
+
+
+...................................................................
+
+ANGULAR_TRAINING -> TYPESCRIPT 
+
+TYPESCRIPT
+
+-> superset of JavaScript 
+
+-> JS + additional properties 
+
+-> TYPESCRIPT -> TYPE + SCRIPT -> powerful type checking abilities 
+    JavaScript is a loosely typed language 
+    eg. name = 'John'; //name -> string 
+
+-> supported by limited browsers.    
+
+......................
+
+TYPESCRIPT --> JavaScript
+
+Transpilation 
+transpiler -> TSC -> TYPESCRIPT COMPILER 
+
+.........................
+
+NPM -> NODE PACKAGE MANAGER 
+
+npm install -g typescript 
+
+-> file.ts
+-> tsc file.ts --watch
+
+................................
+
+VARIABLES 
+
+-> containers to store data.
+
+IMPLICIT DECLARATION 
+    var x = 10;
+    x ='Tom' //error
+EXPLICIT DECLARATION
+    var x : number = 10;
+
+
+KEYWORDS -> var , let and const     
+
+//redeclare
+var x = 10;
+var x = 'Sheetal';
+
+
+let x = 10;
+let x = 20;
+
+//reassign
+
+let x = 20;
+x = 10;
+
+
+//reassign
+
+var x = 20;
+x = 10;
+
+
+//reassign
+
+const x = 20;
+x = 10;
+error 
+
+
+var / let / const --> js (var)
+
+......................................................
+
+DATA TYPES 
+
+-> PRIMITIVE DATATYPE
+    -string
+    -number
+    -boolean
+    -undefined
+    -null
+
+-> NON PRIMITIVE DATATYPE
+    -ARRAY
+    -object
+    -date 
+
+date constructor 
+
+var CurrentDate =  new Date();
+
+year month day hours minutes sec millisec 
+
+.........................................
+ARRAY 
+
+-> [ele1 , ele2 , ele3 , ele4 .................]
+
+object
+
+-> {key : value , key1 : value1 , key2 : value2 }
+
+
+
+function xyz(){
+    var x = 10;
+    return x ; 
+}
+
+..............................................
+
+OBJECT ORIENTED 
+
+-> Code more modular , reusable 
+-> well organised code
+-> easier to debug 
+-> large complex applications. 
+
+
+
+
+...........................................
+
+class 
+-> template / blueprint for creating objects 
+
+template -> length , breadth , height 
+
+CLass -> properties -> variable, methods -> functions
+
+car -> color , engine , seats , price 
+
+...........
+
+Class class_name{
+    //fields -> variables/properties
+    //constructor
+    //methods -> function 
+
+}
+
+//creating an object
+var obj = new class_name();
+
+..................................................
+
+CLASS A -> properties, methods , BASE CLASS 
+CLASS B -> properties, methods, additional properties and methods , DERIVED CLASS 
+
+INHERITANCE 
+
+extends 
+
+class B extends A {
+
+}
+
+super()
+
+
+Father -house 
+Son -house 
+
+file1.ts
+export class A{
+
+}
+
+file2.ts
+
+import A from 'file1.ts';
+
+....................................................
+ANGULAR ARCHITECTURE 
+
+-> INSTALL ANGULAR
+
+npm install -g @angular/cli
+
+-> CREATE AN APPLICATION
+
+ng new <name>
+
+ng new MyApp
+Would you like to add Angular routing? (y/N) 
+stylesheet - CSS
+
+..................................................
+
+ANGULAR COMPONENT
+
+-> building block of UI
+
+cartComponents 
+loginComponent -> sign in , forgot password , create account 
+address component 
+
+
+-> ng generate component <name>
+
+css, html , spec.ts , ts
+
+app.component.html -> <selector>
+
+bootstrap , jquery 
+
+npm install bootstrap
+npm install jquery
+
+node_modules/bootstrap/dist/css/bootstrap.min.css
+node_modules/bootstrap/dist/js/bootstrap.min.js
+node_modules/jquery/dist/jquery.min.js
+
+............................................................................................
+
+DATABINDING IN ANGULAR 
+
+COMPONENT <----> VIEW 
+
+ng g c databind 
+
+Types of DATABINDING
+
+-> ONE WAY DATABINDING
+    ->INTERPOLATION BINDING 
+        COMPONENT -> VIEW 
+        {{property}}
+
+    -> PROPERTY BINDING
+        COMPONENT -> VIEW 
+        color : red 
+        property : value 
+        [property]='value'
+
+    -> EVENT BINDING
+        VIEW -> COMPONENT
+        (event_name)
+          
+
+-> TWO WAY DATABINDING
+
+    COMPONENT -> VIEW
+    VIEW -> COMPONENT
+
+    [(property)] 
+    ngModel -> binds the input value with the app data . 
+    -> FormsModule 
+
+
+ .......................................................................
+
+ DIRECTIVES IN ANGULAR 
+
+ DOM -> DOCUMENT OBJECT MODEL  -> HTML elements   
+
+extend the power of DOM (HTML ELEMENTS)
+Add / remove / change the apperance of DOM.
+
+<h1 id='data'>Heading 1</h1>
+
+document.getElementById('data') //js
+
+#data{
+    color:red   //css
+}
+
+Types of DIRECTIVES 
+
+-> BUILT-IN DIRECTIVE 
+    -> COMPONENT DIRECTIVE 
+        templateurl / template , styleurls / styles 
+    -> STRUCTURAL DIRECTIVE
+        changes in the layout of DOM .  
+        add/remove / change the structure of DOM.
+
+        *ngIf (Add/remove)    
+        *ngFor(Iterate over list of elements)
+
+    -> ATTRIBUTE DIRECTIVE
+        <h1 style>   
+        <script src>
+        <img src=>
+        [ngStyle] = ""
+        [ngClass]= "{classname : true/false}"
+
+     <h1 class='data'>Heading 1</h1>   
+     <h1> Heading 2</h1>
+
+     .data{color : red};
+
+     data = {id: 1, name : 'Admin1' , age : 21}
+     data.id 
+     data.name
+     data.age 
+-> CUSTOM DIRECTIVE 
+    ng g directive <name>
+
+    spec.ts , ts
+
+
+..................................................
+
+PIPES IN ANGULAR
+
+-> transform the data to the required format 
+-> don't alter the data
+
+data --> Pipe --> Transformed data 
+
+{{data | pipename : parameter }}
+
+Types of Pipe 
+
+-> BUILT-IN PIPE 
+    -uppercase 
+    -lowercase
+    -titlecase
+    -slice pipe // arr = [1,2,6,7,8] = {{arr | slice : 1 : 4}}
+    -date {xyz | date : ''}
+    -currency {data | currency : 'countrycode'}
+
+ -> ng g c pipe
+
+-> CUSTOM PIPE 
+
+    ng g pipe <name>
+    spec.ts, ts
+
+
+let obj1 : interfacename ={
+
+}
+
+class A implements interface 
+
+{{data | pipe }}
+
+{{data | custom : '' }}
+
+transform(data -> you want to transform , : '' )
+......................................
+
+SERVICES IN ANGULAR 
+
+-> opeartional tasks 
+
+
+COMPONENT1  field1 , method1
+
+COMPONENT2  field1 , method1, method 2          INJECT           SERVICE -> field1 , method1
+
+COMPONENT3  field1 , method1, method 3
+
+
+-> reusable 
+-> easy to debug 
+
+
+ng g service <service_name>
+
+ts , spec.ts 
+
+.............................................................
+
+HTTP CLIENT SERVICE 
+
+APP -> COMPONENTS -> SERVICE -> HTTP -> SERVER 
+                        OBSERVABLE
+
+HttpClientModule   
+
+TV REPORTERS            HTTP 
+                        | packets 
+CHANNEL                SERVICE 
+
+user1 user2 user3 user4 
+subscribe(()=>{})
+
+OBSERVABLE 
+-> extended library -> RxJS 
+-> asynch.data 
+
+ng g service http 
+ng g c http 
+
+
+......................
+
+function add(a, b){
+    return a+b;
+}
+
+var add = (a, b)=> a+b;
+
+((data)=>this.users=data)
+
+
+..........................
+
+PRODUCT COMPONENT
+prodcode , prodname , price 
+(databind, directive, pipe )
+service 
+
+
+....................................................
+
+ANGULAR ROUTING 
+
+-> enables navigation from to view to another view component .
+-> takes url as instruction eg. xyz.com/home
+-> move back and forth 
+
+Routes =[{path : 'home' , component : HomeComponent},
+{path :'', component: HomeComponent}]
+xyz.com
+
+ctrl+/
+
+component A -> 
+xyz.com/home/abc -> abcComponent 
+
+
+COURSE -> based on courseno -> details of the course 
+course -> coursedetails 
+.............................................................................
+
+ANGULAR FORMS 
+
+-> data entry tasks 
+-> booking a flight , updating , 
+
+Types of Forms 
+
+-> TEMPLATE DRIVEN FORM 
+-> MODEL DRIVEN FORM / REACTIVE FORMS 
+
+
+TEMPLATE DRIVEN FORM 
+
+-> uses conventional form tag <form></form>
+-> #form_name 
+-> ngForm 
+-> ngModel -> validation , tracking 
+-> ngModelGroup -> group of ngModel
+-> CSS classes -> style 
+
+
+username -ngModel
+password -ngModel
+email -ngModel
+
+address -> ngModelGroup
+house no ./flat no.- -ngModel
+floor no. -ngModel
+area/street-ngModel
+pincode -ngModel
+city -ngModel
+
+...................................
+
+MODEL DRIVEN FORM / REACTIVE FORM 
+
+-> uses conventional form tag <form></form>
+-> based on programming 
+-> formControl -> validation / tracking 
+-> formGroup -> group of form control or it may contain form group.
+-> ReactiveFormsModule 
+-> Validators {store eg. minlength : }
+
+username - formControl  (formControlName)
+password - formControl 
+email - formControl 
+                                                                    FORMGROUP 
+address -> formGroup
+house no ./flat no.- formControl 
+floor no. - formControl 
+area/street- formControl 
+pincode - formControl 
+city - formControl 
+
+
+Note : for each input field , an instance of this class is created 
+
+........................................................................
+
+UNIT TESTING
+
+-> testing of each unit / component 
+-> Component Testing 
+-> primary level of testing 
+-> ensure the component is working as per the specification 
+-> pass/fail
+-> Testing tools -> JASMINE , KARMA 
+
+
+-> JASMINE 
+    - write the test cases .
+    - BDD 
+    - synch/ async code 
+    - dose not require DOM.
+    - easy to write 
+    - SUITE & SPEC 
+    
+-> KARMA 
+    -test runner 
+
+-> SUITE 
+   -describe()
+   -describe('string/title', functions (test cases ) ) 
+
+-> SPEC 
+  -it()
+  -it('string/title' ,function )
+  -expect()-> actual value (x)
+  -matcher function (toBe,....) x>y
+  -expectedValue (y)
+  -pass/fail.
+
+
+
+  ->ng new UT
+  ->ROUTING -> NO
+
+
+ng test
+
+<h1 style = 'COLOR : '', '>COURSE COMPONENT</h1>
+
