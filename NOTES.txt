@@ -300,6 +300,7 @@ Types of DATABINDING
 
 -> ONE WAY DATABINDING
     ->INTERPOLATION BINDING 
+ way to bind data from your component to the HTML template. It allows you to embed expressions within double curly braces ( {{ }} ) in the template, and Angular will replace those expressions with the actual values from your component.
         COMPONENT -> VIEW 
         {{property}}
 
@@ -345,8 +346,10 @@ Types of DIRECTIVES
 
 -> BUILT-IN DIRECTIVE 
     -> COMPONENT DIRECTIVE 
+            a directive that has a template and controls a part of the screen where Angular renders it.
         templateurl / template , styleurls / styles 
     -> STRUCTURAL DIRECTIVE
+            structural directives in Angular are used to change the HTML layout by adding, removing, or changing elements in the DOM
         changes in the layout of DOM .  
         add/remove / change the structure of DOM.
 
@@ -354,6 +357,7 @@ Types of DIRECTIVES
         *ngFor(Iterate over list of elements)
 
     -> ATTRIBUTE DIRECTIVE
+        Attribute directives listen to and modify the behavior of other HTML elements, attributes, properties, and components.
         <h1 style>   
         <script src>
         <img src=>
